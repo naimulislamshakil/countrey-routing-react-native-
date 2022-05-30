@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import { useEffect, useState } from "react";
 import Country from "./Country";
@@ -14,9 +14,11 @@ export default function Countrys() {
   return (
     <View>
       <Text>Countrys</Text>
-      {countryes.map((country) => (
-        <Country></Country>
-      ))}
+      <ScrollView>
+        {countryes.map((country) => (
+          <Country country={country}></Country>
+        ))}
+      </ScrollView>
     </View>
   );
 }
