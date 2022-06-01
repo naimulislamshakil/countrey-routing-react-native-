@@ -13,10 +13,10 @@ export default function Countrys() {
   }, []);
   return (
     <View>
-      <Text>Countrys</Text>
+      <Text>Countrys {countryes.length}</Text>
       <ScrollView>
-        {countryes.map((country) => (
-          <Country country={country}></Country>
+        {countryes.map((country, index) => (
+          <Country country={country} key={index}></Country>
         ))}
       </ScrollView>
     </View>
